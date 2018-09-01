@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C42FB2442104EA2300AFE032 /* BullCowGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BullCowGame; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42FB2442104EA2300AFE032 /* FBullCowGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FBullCowGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42FB2472104EA2300AFE032 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		C42FB23B2104EA2300AFE032 = {
 			isa = PBXGroup;
 			children = (
-				C42FB2462104EA2300AFE032 /* BullCowGame */,
+				C42FB2462104EA2300AFE032 /* FBullCowGame */,
 				C42FB2452104EA2300AFE032 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		C42FB2452104EA2300AFE032 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C42FB2442104EA2300AFE032 /* BullCowGame */,
+				C42FB2442104EA2300AFE032 /* FBullCowGame */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C42FB2462104EA2300AFE032 /* BullCowGame */ = {
+		C42FB2462104EA2300AFE032 /* FBullCowGame */ = {
 			isa = PBXGroup;
 			children = (
 				C42FB2472104EA2300AFE032 /* main.cpp */,
 			);
-			path = BullCowGame;
+			path = FBullCowGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C42FB2432104EA2300AFE032 /* BullCowGame */ = {
+		C42FB2432104EA2300AFE032 /* FBullCowGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C42FB24B2104EA2300AFE032 /* Build configuration list for PBXNativeTarget "BullCowGame" */;
+			buildConfigurationList = C42FB24B2104EA2300AFE032 /* Build configuration list for PBXNativeTarget "FBullCowGame" */;
 			buildPhases = (
 				C42FB2402104EA2300AFE032 /* Sources */,
 				C42FB2412104EA2300AFE032 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = BullCowGame;
-			productName = BullCowGame;
-			productReference = C42FB2442104EA2300AFE032 /* BullCowGame */;
+			name = FBullCowGame;
+			productName = FBullCowGame;
+			productReference = C42FB2442104EA2300AFE032 /* FBullCowGame */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C42FB23F2104EA2300AFE032 /* Build configuration list for PBXProject "BullCowGame" */;
+			buildConfigurationList = C42FB23F2104EA2300AFE032 /* Build configuration list for PBXProject "FBullCowGame" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C42FB2432104EA2300AFE032 /* BullCowGame */,
+				C42FB2432104EA2300AFE032 /* FBullCowGame */,
 			);
 		};
 /* End PBXProject section */
@@ -255,7 +255,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C42FB23F2104EA2300AFE032 /* Build configuration list for PBXProject "BullCowGame" */ = {
+		C42FB23F2104EA2300AFE032 /* Build configuration list for PBXProject "FBullCowGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C42FB2492104EA2300AFE032 /* Debug */,
@@ -264,7 +264,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C42FB24B2104EA2300AFE032 /* Build configuration list for PBXNativeTarget "BullCowGame" */ = {
+		C42FB24B2104EA2300AFE032 /* Build configuration list for PBXNativeTarget "FBullCowGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C42FB24C2104EA2300AFE032 /* Debug */,
