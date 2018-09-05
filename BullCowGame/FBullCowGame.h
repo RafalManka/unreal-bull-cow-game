@@ -14,10 +14,10 @@ using int32 = int;
 struct FBullCowCount {
     int32 Bulls = 0;
     int32 Cows = 0;
-    bool IsWon = false;
 };
 
 enum class EGuessStatus {
+    Invalid,
     OK,
     Not_Isogram,
     Wrong_Length,
@@ -42,7 +42,7 @@ public:
 
     void Reset();
 
-    FBullCowCount SubmitGuess(FString);
+    FBullCowCount SubmitValidGuess(FString);
 
 private:
     int32 CurrentTry;
@@ -54,6 +54,10 @@ private:
     bool isCorrectLength(FString basic_string);
 
     bool isLowercase(FString basic_string);
+
+    bool isGameWon;
+
+    EGuessStatus CheckGuessValidity(FString guess);
 };
 
 

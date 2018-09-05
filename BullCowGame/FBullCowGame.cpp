@@ -5,7 +5,10 @@
 //
 
 #include <iostream>
+#include <set>
 #include "FBullCowGame.h"
+
+#define TSet std::set
 
 using FString = std::string;
 using int32 = int;
@@ -36,7 +39,7 @@ EGuessStatus FBullCowGame::GetValidity(FString guess) {
 
 int32 FBullCowGame::GetCurrentTry() { return CurrentTry; }
 
-bool FBullCowGame::IsGameWon() { return false; }
+bool FBullCowGame::IsGameWon() { return isGameWon; }
 
 FString FBullCowGame::GetGuess() {
     FString Guess;
@@ -46,7 +49,7 @@ FString FBullCowGame::GetGuess() {
 
 FBullCowGame::FBullCowGame() { Reset(); }
 
-FBullCowCount FBullCowGame::SubmitGuess(FString guess) {
+FBullCowCount FBullCowGame::SubmitValidGuess(FString guess) {
     CurrentTry++;
     int32 Bulls = 0;
     int32 Cows = 0;
@@ -65,7 +68,7 @@ FBullCowCount FBullCowGame::SubmitGuess(FString guess) {
     FBullCowCount BullCowCount = FBullCowCount();
     BullCowCount.Bulls = Bulls;
     BullCowCount.Cows = Cows;
-    BullCowCount.IsWon = Bulls == MyHiddenWord.length();
+    isGameWon = Bulls == MyHiddenWord.length();
     return BullCowCount;
 }
 
@@ -73,7 +76,15 @@ int32 FBullCowGame::GetWordLength() const {
     return static_cast<int32>(MyHiddenWord.length());
 }
 
-bool FBullCowGame::IsIsogram(FString basic_string) {
+bool FBullCowGame::IsIsogram(FString Word) {
+    TSet<char> LettersSeen;
+    for (char Letter : Word) {
+        Letter = static_cast<char>(tolower(Letter));
+        if (LettersSeen.find(Letter) != LettersSeen.end()) {
+            return false;
+        }
+        LettersSeen.insert(Letter);
+    }
     return true;
 }
 
@@ -81,7 +92,25 @@ bool FBullCowGame::isCorrectLength(FString basic_string) {
     return basic_string.length() == this->GetWordLength();
 }
 
-bool FBullCowGame::isLowercase(FString basic_string) {
+bool FBullCowGame::isLowercase(FString Word) {
+    for (const char Character : Word) {
+        if (!islower(Character)) {
+            return false;
+        }
+    }
     return true;
 }
+
+EGuessStatus FBullCowGame::CheckGuessValidity(FString guess) {
+    if (!IsIsogram(guess)) {
+        return EGuessStatus::Not_Isogram;
+    }
+    if (!isLowercase(guess)) {
+        return EGuessStatus::Not_Lowercase;
+    }
+    return EGuessStatus::OK;
+}
+
+
+
 
